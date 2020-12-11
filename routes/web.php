@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +23,11 @@ Route::get('/', function () {
 });
 
 Route::get('about', function (){
-
-
     return view('about');
 });
+
+Route::get('cars', [CarController::class, 'index']);
+Route::get('/car/{car}', [CarController::class, 'show'])->name('car');
+
+
 
