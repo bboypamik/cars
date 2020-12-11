@@ -26,7 +26,7 @@ Route::get('about', function (){
     return view('about');
 });
 
-Route::get('cars', [CarController::class, 'index']);
+Route::get('cars', [CarController::class, 'index'])->name('cars');
 Route::get('/car/{car}', [CarController::class, 'show'])->name('car');
 
 
