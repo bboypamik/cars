@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $name = 'Miro';
+
+    return view('welcome', compact('name'));
+
 });
+
+Route::get('about', function (){
+
+
+    return view('about');
+});
+
